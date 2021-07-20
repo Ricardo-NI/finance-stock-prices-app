@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CompanyQuoteActivity">
+
+    <ImageButton
+        android:id="@+id/btn_star"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/save_company"
+        android:scaleType="fitCenter"
+        app:tint="?attr/colorOnSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_empty_star" />
+
+    <TextView
+        android:id="@+id/txv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_star"
+        tools:text="2021-07-15" />
+
+    <TextView
+        android:id="@+id/txv_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_date"
+        tools:text="CODE" />
+
+    <TextView
+        android:id="@+id/txv_label_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/open"
+        app:layout_constraintStart_toStartOf="@+id/txv_symbol"
+        app:layout_constraintTop_toTopOf="@+id/txv_open" />
+
+    <TextView
+        android:id="@+id/txv_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintStart_toEndOf="@+id/txv_label_open"
+        app:layout_constraintTop_toTopOf="@+id/txv_change"
+        tools:text="27.49" />
+
+    <TextView
+        android:id="@+id/txv_label_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/currency"
+        app:layout_constraintEnd_toStartOf="@+id/txv_currency"
+        app:layout_constraintTop_toTopOf="@+id/txv_currency" />
+
+    <TextView
+        android:id="@+id/txv_label_pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/previous_close"
+        app:layout_constraintStart_toStartOf="@+id/txv_label_low"
+        app:layout_constraintTop_toBottomOf="@+id/txv_label_low" />
+
+    <TextView
+        android:id="@+id/txv_label_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/high"
+        app:layout_constraintStart_toStartOf="@+id/txv_label_open"
+        app:layout_constraintTop_toBottomOf="@+id/txv_label_open" />
+
+    <TextView
+        android:id="@+id/txv_label_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/low"
+        app:layout_constraintStart_toStartOf="@+id/txv_label_high"
+        app:layout_constraintTop_toBottomOf="@+id/txv_label_high" />
+
+    <TextView
+        android:id="@+id/txv_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintStart_toStartOf="@+id/txv_open"
+        app:layout_constraintTop_toTopOf="@+id/txv_label_high"
+        tools:text="27.63" />
+
+    <TextView
+        android:id="@+id/txv_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintStart_toStartOf="@+id/txv_high"
+        app:layout_constraintTop_toTopOf="@+id/txv_label_low"
+        tools:text="27.08" />
+
+    <TextView
+        android:id="@+id/txv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txv_symbol"
+        tools:text="27.08" />
+
+    <TextView
+        android:id="@+id/txv_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green_80"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txv_price"
+        app:layout_constraintTop_toBottomOf="@+id/txv_price"
+        tools:text="(-2.13%)" />
+
+    <TextView
+        android:id="@+id/txv_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/green_80"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txv_percent"
+        app:layout_constraintTop_toTopOf="@+id/txv_percent"
+        tools:text="-0.59" />
+
+    <TextView
+        android:id="@+id/txv_prev_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintStart_toEndOf="@+id/txv_label_pc"
+        app:layout_constraintTop_toTopOf="@+id/txv_label_pc"
+        tools:text="27.67" />
+
+    <TextView
+        android:id="@+id/txv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintEnd_toEndOf="@+id/txv_percent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_percent"
+        tools:text="BRL" />
+
+    <Button
+        android:id="@+id/btn_company_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/company_overview"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/txv_currency"
+        app:layout_constraintTop_toBottomOf="@+id/txv_label_pc"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

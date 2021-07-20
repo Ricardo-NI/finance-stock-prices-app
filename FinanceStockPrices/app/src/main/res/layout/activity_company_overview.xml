@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CompanyOverviewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/txv_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="CODE" />
+
+            <TextView
+                android:id="@+id/txv_company_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txv_symbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txv_symbol"
+                app:layout_constraintTop_toTopOf="@+id/txv_symbol"
+                tools:text="Company name" />
+
+            <TextView
+                android:id="@+id/txv_label_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/asset_type"
+                app:layout_constraintStart_toStartOf="@+id/txv_symbol"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_exchange" />
+
+            <TextView
+                android:id="@+id/txv_asset_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_exchange"
+                app:layout_constraintStart_toEndOf="@+id/txv_label_at"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_at"
+                tools:text="Commom Stock" />
+
+            <TextView
+                android:id="@+id/txv_label_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/exchange"
+                app:layout_constraintStart_toStartOf="@+id/txv_symbol"
+                app:layout_constraintTop_toBottomOf="@+id/txv_symbol" />
+
+            <TextView
+                android:id="@+id/txv_exchange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_company_name"
+                app:layout_constraintStart_toEndOf="@+id/txv_label_exchange"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_exchange"
+                tools:text="NYSE" />
+
+            <TextView
+                android:id="@+id/txv_label_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/country"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_at"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_at" />
+
+            <TextView
+                android:id="@+id/txv_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_asset_type"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txv_asset_type"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_country"
+                tools:text="USA" />
+
+            <TextView
+                android:id="@+id/txv_label_sector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sector"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_country"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_country" />
+
+            <TextView
+                android:id="@+id/txv_sector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_country"
+                app:layout_constraintStart_toStartOf="@+id/txv_country"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_sector"
+                tools:text="TECHNOLOGY" />
+
+            <TextView
+                android:id="@+id/txv_label_sector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/industry"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_sector"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_sector" />
+
+            <TextView
+                android:id="@+id/txv_industry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_sector"
+                app:layout_constraintStart_toStartOf="@+id/txv_sector"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_sector2"
+                tools:text="COMPUTER AND OFFICE EQUIPMENT" />
+
+            <TextView
+                android:id="@+id/txv_label_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/address"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_sector2"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_sector2" />
+
+            <TextView
+                android:id="@+id/txv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_industry"
+                app:layout_constraintStart_toStartOf="@+id/txv_industry"
+                app:layout_constraintTop_toTopOf="@+id/txv_label_address"
+                tools:text="1 NEW ORCHARD ROAD, ARMONK, NY, US" />
+
+            <TextView
+                android:id="@+id/txv_label_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/description"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_address"
+                app:layout_constraintTop_toBottomOf="@+id/txv_address" />
+
+            <TextView
+                android:id="@+id/txv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:singleLine="false"
+                android:textColor="?attr/colorSecondaryVariant"
+                app:layout_constraintEnd_toEndOf="@+id/txv_address"
+                app:layout_constraintStart_toStartOf="@+id/txv_label_desc"
+                app:layout_constraintTop_toBottomOf="@+id/txv_label_desc"
+                tools:text="International Business Machines Corporation (IBM) is an American multinational technology company." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

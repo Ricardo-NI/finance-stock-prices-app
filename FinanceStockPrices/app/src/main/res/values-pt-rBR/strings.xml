@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Meu portfólio de ações "</string>
+    <string name="save_company">salvar empresa</string>
+    <string name="open">Abertura</string>
+    <string name="high">Alta</string>
+    <string name="low">Baixa</string>
+    <string name="previous_close">Fechamento anterior</string>
+    <string name="currency">Moeda</string>
+    <string name="company_overview">Visão geral da empresa</string>
+    <string name="asset_type">Tipo de ativo</string>
+    <string name="exchange">Bolsa de Valores</string>
+    <string name="country">País</string>
+    <string name="sector">Setor</string>
+    <string name="industry">Industria</string>
+    <string name="address">Endereço</string>
+    <string name="description">Descrição</string>
+    <string name="add_company">adicionar empresa</string>
+    <string name="msg_error_get_data">Ocorreu um erro ao buscar os dados:</string>
+    <string name="confirm_delete">Tem certeza que deseja excluir esta empresa?</string>
+    <string name="delete_record">Excluir registro</string>
+    <string name="add_stocks">Adicionar ações</string>
+    <string name="stock_quote">Cotação da ação</string>
+</resources>
